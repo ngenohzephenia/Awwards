@@ -14,6 +14,9 @@ import os
 import django_heroku
 import dj_database_url
 from decouple import config,Csv
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -145,6 +148,12 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 LOGIN_REDIRECT_URL = '/'
 STAR_RATINGS_RANGE=10
+
+cloudinary.config(
+  cloud_name = "ddhltqlmg",
+  api_key = "552113269538649",
+  api_secret = "5NQiaRC4ZM0tZnnDPjw04pkTO5M"
+)
 
 
 # Configure Django App for Heroku.
